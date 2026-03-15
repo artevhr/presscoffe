@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пресс — кофейня в Минске</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;700&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">ПРЕСС</a>
+  <ul class="nav-links">
+    <li><a href="#menu">Меню</a></li>
+    <li><a href="#gallery">Интерьер</a></li>
+    <li><a href="#contact">Контакты</a></li>
+    <li><a href="#events">События</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">Забронировать</a>
+  <div class="burger" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()">✕</button>
+  <a href="#menu" onclick="closeMob()">Меню</a>
+  <a href="#gallery" onclick="closeMob()">Интерьер</a>
+  <a href="#contact" onclick="closeMob()">Контакты</a>
+  <a href="#events" onclick="closeMob()">События</a>
+  <a href="#booking" onclick="closeMob()">Забронировать</a>
+</div>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Минск · С 2019 года</div>
+      <h1 class="hero-h1">Хороший<br><span>кофе — это</span><br>привычка</h1>
+      <p class="hero-sub">Кофейня в центре Минска. Авторские обжарки, завтраки до 15:00 и место, в которое хочется возвращаться.</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=85" alt="Кофе">
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">6</div><div class="hero-stat-label">лет в Минске</div></div>
+      <div><div class="hero-stat-num">12</div><div class="hero-stat-label">сортов кофе</div></div>
+      <div><div class="hero-stat-num">4.9</div><div class="hero-stat-label">оценка гостей</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-dark">Смотреть меню →</a>
+      <a href="#contact" class="btn-outline">Как добраться</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Завтраки до 15:00</span>
+    <span class="marquee-item">Specialty кофе</span>
+    <span class="marquee-item">Авторская выпечка</span>
+    <span class="marquee-item">Живые события</span>
+    <span class="marquee-item">Бесплатный Wi-Fi</span>
+    <span class="marquee-item">Летняя веранда</span>
+    <span class="marquee-item">Завтраки до 15:00</span>
+    <span class="marquee-item">Specialty кофе</span>
+    <span class="marquee-item">Авторская выпечка</span>
+    <span class="marquee-item">Живые события</span>
+    <span class="marquee-item">Бесплатный Wi-Fi</span>
+    <span class="marquee-item">Летняя веранда</span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div>
+    <div class="section-eyebrow">О нас</div>
+    <h2 class="section-h2">Кофе — это<br>не напиток.<br><em>Это ритуал.</em></h2>
+    <p class="about-p">Мы открылись в 2019 году в двух шагах от проспекта Независимости с одной идеей: сделать по-настоящему хороший кофе доступным каждый день. Не как событие, а как привычку.</p>
+    <p class="about-p">Все зёрна обжариваем сами или закупаем у проверенных обжарщиков из Беларуси и Европы. Меню меняется сезонно.</p>
+    <blockquote class="about-quote">"Хорошее место — это когда людям не хочется уходить. Мы стараемся быть таким местом."</blockquote>
+  </div>
+  <div class="about-right">
+    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="Интерьер" class="about-img-main">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Кофе" class="about-img-float">
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="menu-top">
+    <div>
+      <div class="section-eyebrow light">Меню</div>
+      <h2 class="section-h2 light">Всё для<br>хорошего дня</h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-tab="coffee">Кофе</button>
+      <button class="menu-tab" data-tab="tea">Напитки</button>
+      <button class="menu-tab" data-tab="food">Еда</button>
+      <button class="menu-tab" data-tab="pastry">Выпечка</button>
+    </div>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-panel active" data-panel="coffee">
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Эспрессо</div><div class="menu-card-price">от 4 BYN</div></div><div class="menu-card-desc">Двойная порция. Тёмная обжарка Бразилия + Эфиопия.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Капучино</div><div class="menu-card-price">6.5 BYN</div></div><div class="menu-card-desc">Мягкая пена, сбалансированный вкус. С растительным молоком.</div><span class="menu-tag-pill">Бестселлер</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Флэт Уайт</div><div class="menu-card-price">7 BYN</div></div><div class="menu-card-desc">Двойной шот с небольшим количеством шелковистого молока.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Фильтр кофе</div><div class="menu-card-price">5.5 BYN</div></div><div class="menu-card-desc">Сезонный сорт в Chemex. Меняется каждую неделю.</div><span class="menu-tag-pill">Сезонное</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Раф</div><div class="menu-card-price">7.5 BYN</div></div><div class="menu-card-desc">Сливочный, нежный. С ванилью, лавандой или карамелью.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Кортадо</div><div class="menu-card-price">6 BYN</div></div><div class="menu-card-desc">Эспрессо с равным количеством тёплого молока.</div></div>
+    </div>
+    <div class="menu-panel" data-panel="tea">
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Матча Латте</div><div class="menu-card-price">7.5 BYN</div></div><div class="menu-card-desc">Церемониальный матча, взбитое молоко. Горячий или со льдом.</div><span class="menu-tag-pill">Популярное</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Чай листовой</div><div class="menu-card-price">5 BYN</div></div><div class="menu-card-desc">Улун, Дарджилинг, Гун Паудер. 400 мл в стеклянном чайнике.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Апельсиновый фреш</div><div class="menu-card-price">6.5 BYN</div></div><div class="menu-card-desc">Свежевыжатый, без сахара. Три апельсина в одном стакане.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Лимонад</div><div class="menu-card-price">7 BYN</div></div><div class="menu-card-desc">Сейчас: клубника и базилик / манго и имбирь.</div><span class="menu-tag-pill">Сезонное</span></div>
+    </div>
+    <div class="menu-panel" data-panel="food">
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Авокадо тост</div><div class="menu-card-price">12 BYN</div></div><div class="menu-card-desc">Ржаной хлеб, авокадо, яйцо пашот, микрозелень.</div><span class="menu-tag-pill">Завтрак</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Каша с ягодами</div><div class="menu-card-price">9 BYN</div></div><div class="menu-card-desc">Овсяная на кокосовом молоке, свежие ягоды, мёд.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Яйца бенедикт</div><div class="menu-card-price">14 BYN</div></div><div class="menu-card-desc">Английский маффин, ветчина, пашот, голландез.</div><span class="menu-tag-pill">Бестселлер</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Панини с бри</div><div class="menu-card-price">11 BYN</div></div><div class="menu-card-desc">Сыр бри, груша, руккола, горчичный соус. Горячий.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Боул с лососем</div><div class="menu-card-price">16 BYN</div></div><div class="menu-card-desc">Рис, малосольный лосось, авокадо, кунжутная заправка.</div></div>
+    </div>
+    <div class="menu-panel" data-panel="pastry">
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Круассан</div><div class="menu-card-price">4.5 BYN</div></div><div class="menu-card-desc">Классический или с миндалём, шоколадом. Свежий каждое утро.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Морковный торт</div><div class="menu-card-price">6.5 BYN</div></div><div class="menu-card-desc">Кремчиз, пряные специи. Рецепт нашей постоянной гостьи.</div><span class="menu-tag-pill">Фаворит</span></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Чизкейк</div><div class="menu-card-price">7 BYN</div></div><div class="menu-card-desc">Нью-йоркский, плотный. С ягодным кули или карамелью.</div></div>
+      <div class="menu-card"><div class="menu-card-top"><div class="menu-card-name">Брауни</div><div class="menu-card-price">5.5 BYN</div></div><div class="menu-card-desc">Влажный, насыщенный шоколадный. Без глютена по запросу.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="gallery-head">
+    <div class="section-eyebrow">Пространство</div>
+    <h2 class="section-h2">Место, в которое<br>хочется возвращаться</h2>
+  </div>
+  <div class="gallery-track">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=840&q=80" alt="Интерьер" width="380" height="520"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80" alt="Кофе" width="280" height="520"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=720&q=80" alt="Детали" width="340" height="520"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=520&q=80" alt="Книги" width="240" height="520"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=760&q=80" alt="Бариста" width="360" height="520"></div>
+  </div>
+</section>
+
+<div class="contact-section" id="contact">
+  <div class="contact-left">
+    <div class="section-eyebrow">Контакты</div>
+    <h2 class="section-h2" style="margin-bottom:40px">Адрес<br>и часы</h2>
+    <div class="contact-block">
+      <div class="contact-label">Адрес</div>
+      <div class="contact-value">ул. Революционная, 10<br>Минск, 220030</div>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Режим работы</div>
+      <div class="hours-grid">
+        <div class="hours-row"><span class="hours-day">Пн — Пт</span><span>08:00 — 22:00</span></div>
+        <div class="hours-row"><span class="hours-day">Суббота</span><span>09:00 — 23:00</span></div>
+        <div class="hours-row"><span class="hours-day">Воскресенье</span><span>10:00 — 21:00</span></div>
+      </div>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Телефон</div>
+      <div class="contact-value"><a href="tel:+375291234567">+375 (29) 123-45-67</a></div>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Email</div>
+      <div class="contact-value"><a href="mailto:tusha@dev.by">tusha@dev.by</a></div>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Соцсети</div>
+      <div class="contact-value">
+        <a href="https://t.me/tushadev_bots" target="_blank">Instagram</a> &nbsp;·&nbsp;
+        <a href="https://t.me/tushadev_bots" target="_blank">VK</a> &nbsp;·&nbsp;
+        <a href="https://t.me/tushadev_bots" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <iframe src="https://yandex.by/map-widget/v1/?ll=27.561831%2C53.902284&z=16&pt=27.561831%2C53.902284~Кофейня+Пресс&l=map" allowfullscreen></iframe>
+  </div>
+</div>
+
+<section class="events-section" id="events">
+  <div class="events-top">
+    <div>
+      <div class="section-eyebrow">События</div>
+      <h2 class="section-h2">Что у нас<br>происходит</h2>
+    </div>
+    <a href="#" class="events-all">Все события →</a>
+  </div>
+  <div class="events-grid">
+    <div class="event-card">
+      <div class="event-date">Сб, 22 марта · 11:00</div>
+      <div class="event-name">Мастер-класс по каппингу</div>
+      <div class="event-desc">Научимся правильно дегустировать кофе, различать оттенки вкуса. Ведёт шеф-бариста Илья.</div>
+      <span class="event-pill">Мест: 8</span>
+    </div>
+    <div class="event-card">
+      <div class="event-date">Вс, 30 марта · 14:00</div>
+      <div class="event-name">Книжный клуб «Пресс»</div>
+      <div class="event-desc">Обсуждаем «Маленький принц». Читать заранее необязательно. Кофе и торт в подарок.</div>
+      <span class="event-pill">Вход свободный</span>
+    </div>
+    <div class="event-card">
+      <div class="event-date">Пт, 4 апреля · 19:00</div>
+      <div class="event-name">Джазовый вечер</div>
+      <div class="event-desc">Живая музыка от минского джаз-трио. Тихий уют, хорошее вино и кофе.</div>
+      <span class="event-pill">Бронь обязательна</span>
+    </div>
+  </div>
+</section>
+
+<section class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div>
+      <div class="section-eyebrow light">Бронирование</div>
+      <h2 class="booking-h2">Забронировать<br>столик</h2>
+      <p class="booking-desc">Гарантируем ваш столик при бронировании за 2 часа. Для групп от 6 человек — звоните напрямую.</p>
+    </div>
+    <div class="booking-form">
+      <div class="form-row">
+        <input type="text" class="form-field" placeholder="Ваше имя">
+        <input type="tel" class="form-field" placeholder="Телефон">
+      </div>
+      <div class="form-row">
+        <input type="date" class="form-field">
+        <select class="form-field">
+          <option value="" disabled selected>Время</option>
+          <option>08:00</option><option>09:00</option><option>10:00</option>
+          <option>11:00</option><option>12:00</option><option>13:00</option>
+          <option>14:00</option><option>15:00</option><option>16:00</option>
+          <option>17:00</option><option>18:00</option><option>19:00</option>
+          <option>20:00</option><option>21:00</option>
+        </select>
+      </div>
+      <select class="form-field">
+        <option value="" disabled selected>Количество гостей</option>
+        <option>1 гость</option><option>2 гостя</option><option>3 гостя</option>
+        <option>4 гостя</option><option>5 гостей</option>
+      </select>
+      <input type="text" class="form-field" placeholder="Пожелания (необязательно)">
+      <button class="form-submit" onclick="submitBooking()">Подтвердить бронирование</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="footer-logo">ПРЕСС</a>
+      <p class="footer-desc">Кофейня в центре Минска. Открыты каждый день с 2019 года.</p>
+      <div class="footer-social">
+        <a href="https://t.me/tushadev_bots" target="_blank" class="social-link">Ig</a>
+        <a href="https://t.me/tushadev_bots" target="_blank" class="social-link">Vk</a>
+        <a href="https://t.me/tushadev_bots" target="_blank" class="social-link">Tg</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Меню</div>
+      <ul class="footer-links">
+        <li><a href="#menu">Кофе</a></li>
+        <li><a href="#menu">Еда</a></li>
+        <li><a href="#menu">Выпечка</a></li>
+        <li><a href="#menu">Напитки</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">Кофейня</div>
+      <ul class="footer-links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#gallery">Интерьер</a></li>
+        <li><a href="#events">События</a></li>
+        <li><a href="#booking">Бронирование</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">Связь</div>
+      <ul class="footer-links">
+        <li><a href="tel:+375291234567">+375 (29) 123-45-67</a></li>
+        <li><a href="mailto:tusha@dev.by">tusha@dev.by</a></li>
+        <li><a href="#">ул. Революционная, 10</a></li>
+        <li><a href="#">Пн–Пт: 08:00–22:00</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Кофейня «Пресс» · Минск</div>
+    <div class="footer-copy">Сделано с уважением к хорошему кофе</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
